@@ -92,7 +92,7 @@ float TSensor1Bus::ReturnTemperature()
 		}
 
 		else{
-			int32_t rawbin = (data[1] << 8) | data[0];
+			float rawbin = (int16_t)(data[1] << 8) | data[0];
 			celsius = rawbin / 16.0;
 			//Serial.println(celsius);
 		}
